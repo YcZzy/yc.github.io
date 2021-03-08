@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-08T07:56:39.867Z</updated>
+  <updated>2021-03-08T09:03:36.971Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,12 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Markdown语法</title>
+    <link href="http://example.com/2021/03/08/Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://example.com/2021/03/08/Markdown%E8%AF%AD%E6%B3%95/</id>
+    <published>2021-03-08T08:32:17.000Z</published>
+    <updated>2021-03-08T09:03:36.971Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><table><thead><tr><th>元素</th><th>Markdown语法</th></tr></thead><tbody><tr><td>标题</td><td># h1 <br> ## h2 <br> ### h3</td></tr><tr><td>粗体</td><td><code>**粗体**</code></td></tr><tr><td>斜体</td><td><code>*斜体*</code></td></tr><tr><td>引用块</td><td><code>&gt;引用块</code></td></tr><tr><td>有序列表</td><td><code>1. 列表1 2.列表2 3. 列表3</code></td></tr><tr><td>无序列表</td><td><code>- 列表1 - 列表2 - 列表3</code></td></tr><tr><td>代码</td><td><code>代码</code></td></tr><tr><td>分割线</td><td><code>---</code></td></tr><tr><td>链接</td><td><code>[title](https://www.example.com</code></td></tr><tr><td>图片</td><td><code>![alt text](image.jpg)</code></td></tr></tbody></table><h2 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h2><table><thead><tr><th>元素</th><th>Markdown语法</th></tr></thead><tbody><tr><td>表格</td><td></td></tr><tr><td>代码块</td><td><code>```代码块```</code></td></tr><tr><td>脚注</td><td><code>Here&#39;s a sentence with a footnote. [^1][^1]: This is the footnote.</code></td></tr><tr><td>标题编号</td><td><code>### My Great Heading &#123;#custom-id&#125;</code></td></tr><tr><td>定义列表</td><td><code>term: definition</code></td></tr><tr><td>删除线</td><td><code>~~删除线~~</code></td></tr><tr><td>任务列表</td><td><code>- [x] Write the press release - [ ] Update the website - [ ] Contact the media</code></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot; title=&quot;基本语法&quot;&gt;&lt;/a&gt;基本语法&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;元素&lt;/th&gt;
+&lt;th&gt;Markdown语法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thea</summary>
+      
+    
+    
+    
+    
+    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>webpack打包后的代码是怎么样的</title>
     <link href="http://example.com/2021/03/08/webpack%E6%89%93%E5%8C%85%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84/"/>
     <id>http://example.com/2021/03/08/webpack%E6%89%93%E5%8C%85%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84/</id>
     <published>2021-03-08T07:55:59.000Z</published>
-    <updated>2021-03-08T07:56:39.867Z</updated>
+    <updated>2021-03-08T08:07:49.370Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir webpack</span><br><span class="line"><span class="built_in">cd</span> webpack</span><br><span class="line">npm init -y</span><br><span class="line">yarn add webpack webpack-cli -D</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre</summary>
+      
     
     
     
@@ -51,7 +86,7 @@
     <link href="http://example.com/2021/03/03/hello-world/"/>
     <id>http://example.com/2021/03/03/hello-world/</id>
     <published>2021-03-03T05:37:37.000Z</published>
-    <updated>2021-03-03T06:54:47.914Z</updated>
+    <updated>2021-03-08T08:05:45.182Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
