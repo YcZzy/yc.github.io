@@ -11,6 +11,12 @@
         <content type="html"><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><table><thead><tr><th>元素</th><th>Markdown语法</th></tr></thead><tbody><tr><td>标题</td><td># h1 <br> ## h2 <br> ### h3</td></tr><tr><td>粗体</td><td><code>**粗体**</code></td></tr><tr><td>斜体</td><td><code>*斜体*</code></td></tr><tr><td>引用块</td><td><code>&gt;引用块</code></td></tr><tr><td>有序列表</td><td><code>1. 列表1 2.列表2 3. 列表3</code></td></tr><tr><td>无序列表</td><td><code>- 列表1 - 列表2 - 列表3</code></td></tr><tr><td>代码</td><td><code>代码</code></td></tr><tr><td>分割线</td><td><code>---</code></td></tr><tr><td>链接</td><td><code>[title](https://www.example.com</code></td></tr><tr><td>图片</td><td><code>![alt text](image.jpg)</code></td></tr></tbody></table><h2 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h2><table><thead><tr><th>元素</th><th>Markdown语法</th></tr></thead><tbody><tr><td>表格</td><td></td></tr><tr><td>代码块</td><td><code>```代码块```</code></td></tr><tr><td>脚注</td><td><code>Here&#39;s a sentence with a footnote. [^1][^1]: This is the footnote.</code></td></tr><tr><td>标题编号</td><td><code>### My Great Heading &#123;#custom-id&#125;</code></td></tr><tr><td>定义列表</td><td><code>term: definition</code></td></tr><tr><td>删除线</td><td><code>~~删除线~~</code></td></tr><tr><td>任务列表</td><td><code>- [x] Write the press release - [ ] Update the website - [ ] Contact the media</code></td></tr></tbody></table>]]></content>
       
       
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
       
         <tags>
             
