@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Markdown语法</title>
+      <link href="2021/03/08/Markdown%E8%AF%AD%E6%B3%95/"/>
+      <url>2021/03/08/Markdown%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><table><thead><tr><th>元素</th><th>Markdown语法</th></tr></thead><tbody><tr><td>标题</td><td># h1 <br> ## h2 <br> ### h3</td></tr><tr><td>粗体</td><td><code>**粗体**</code></td></tr><tr><td>斜体</td><td><code>*斜体*</code></td></tr><tr><td>引用块</td><td><code>&gt;引用块</code></td></tr><tr><td>有序列表</td><td><code>1. 列表1 2.列表2 3. 列表3</code></td></tr><tr><td>无序列表</td><td><code>- 列表1 - 列表2 - 列表3</code></td></tr><tr><td>代码</td><td><code>代码</code></td></tr><tr><td>分割线</td><td><code>---</code></td></tr><tr><td>链接</td><td><code>[title](https://www.example.com</code></td></tr><tr><td>图片</td><td><code>![alt text](image.jpg)</code></td></tr></tbody></table><h2 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h2><table><thead><tr><th>元素</th><th>Markdown语法</th></tr></thead><tbody><tr><td>表格</td><td></td></tr><tr><td>代码块</td><td><code>```代码块```</code></td></tr><tr><td>脚注</td><td><code>Here&#39;s a sentence with a footnote. [^1][^1]: This is the footnote.</code></td></tr><tr><td>标题编号</td><td><code>### My Great Heading &#123;#custom-id&#125;</code></td></tr><tr><td>定义列表</td><td><code>term: definition</code></td></tr><tr><td>删除线</td><td><code>~~删除线~~</code></td></tr><tr><td>任务列表</td><td><code>- [x] Write the press release - [ ] Update the website - [ ] Contact the media</code></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>webpack打包后的代码是怎么样的</title>
+      <link href="2021/03/08/webpack%E6%89%93%E5%8C%85%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84/"/>
+      <url>2021/03/08/webpack%E6%89%93%E5%8C%85%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84/</url>
+      
+        <content type="html"><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir webpack</span><br><span class="line"><span class="built_in">cd</span> webpack</span><br><span class="line">npm init -y</span><br><span class="line">yarn add webpack webpack-cli -D</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
