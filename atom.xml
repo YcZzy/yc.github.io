@@ -6,7 +6,7 @@
   <link href="https://yczzy.github.io/atom.xml" rel="self"/>
   
   <link href="https://yczzy.github.io/"/>
-  <updated>2021-04-12T03:54:42.661Z</updated>
+  <updated>2021-04-20T12:31:13.391Z</updated>
   <id>https://yczzy.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法题1</title>
+    <link href="https://yczzy.github.io/2021/04/20/%E7%AE%97%E6%B3%95%E9%A2%981/"/>
+    <id>https://yczzy.github.io/2021/04/20/%E7%AE%97%E6%B3%95%E9%A2%981/</id>
+    <published>2021-04-20T12:04:07.000Z</published>
+    <updated>2021-04-20T12:31:13.391Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目（中等）"><a href="#题目（中等）" class="headerlink" title="题目（中等）"></a>题目（中等）</h2><p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的<br>一个二维数组和一个整数，判断数组中是否含有该整数。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>1.使用两层循环遍历，时间复杂度o(n^2)</p><p>2.利用递增的特定，可以从左上角开始遍历，当前数值比所求的值小，向右，当前数值比所求的值大，向上，时间复杂度o(n)</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> var findNumber &#x3D; function(matrix,target)&#123;</span><br><span class="line">    if(!matrix.length) return false;</span><br><span class="line">    let x &#x3D; matrix.length - 1,y&#x3D;0;</span><br><span class="line">    while(x&gt;&#x3D;0;y &lt; matrix[0].length)&#123;</span><br><span class="line">        if(matrix[x][y] &#x3D;&#x3D;&#x3D; target)&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;else if (matrix[x][y] &gt; target)&#123;</span><br><span class="line">            x--</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            y++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目（中等）&quot;&gt;&lt;a href=&quot;#题目（中等）&quot; class=&quot;headerlink&quot; title=&quot;题目（中等）&quot;&gt;&lt;/a&gt;题目（中等）&lt;/h2&gt;&lt;p&gt;在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输</summary>
+      
+    
+    
+    
+    <category term="每日一题" scheme="https://yczzy.github.io/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+    
+    <category term="算法" scheme="https://yczzy.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习</title>
+    <link href="https://yczzy.github.io/2021/04/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://yczzy.github.io/2021/04/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-04-14T07:12:59.000Z</published>
+    <updated>2021-04-14T09:09:27.860Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习"></a>什么是机器学习</h2><p>你可能每天用到它许多次却不知道它。 每次你用谷歌或者必应搜索，它们很好用 是因为它们的机器学习软件已经计算出如何对网页排名 脸书或者苹果的照片应用在照片中识别出你的朋友， 这也是机器学习。 每次你阅读你的邮件 垃圾邮件过滤器把你从海量的垃圾邮件中解救出来， 这也是因为你的计算机学习了如何从非垃圾邮件中辨别垃圾邮件。 这就是机器学习。 这是一门是让计算机 无需显式编程 (explicitly programmed) 就能自主学习的学科。 我正在做的其中一个研究项目是让机器人去 整理房间。 你要怎样去做这个？ 你能做的是使机器人看你的演示任务和 从中学习。 机器人会看你拿起了什么东西，放在了哪里 试着去做同样的事情，即使在你不在的时候。 我对此感到兴奋的原因之一是 AI ，即 人工智能问题。 建立真正的智能机器， 就可以做任何你和我也能做的事情。 许多科学家认为在这方面取得进展的最好方法 是通过一种叫做神经网络的学习算法 这种算法模仿人类大脑的工作过程， 之后我也会教你。</p><h2 id="TensorFlow-js"><a href="#TensorFlow-js" class="headerlink" title="TensorFlow.js"></a>TensorFlow.js</h2><p>TensorFlow.js 是Google将机器学习(Machine Learning)TensorFlow框架的JavaScript版本，通过TensorFlow.js，让JavaScript开发人员也有机会加入机器学习的领域。加上前端领域的生态圈支持，让机器学习在浏览器上有了更多发挥的空间！例如结合摄影机、移动设备的陀螺仪等等，只要设备与浏览器支援，都能够发生更多不同的变化，同时借由在客户端浏览器上执行的优势，节省后端学习的成本。</p><h2 id="TensorFlow-js的特色与基本组成"><a href="#TensorFlow-js的特色与基本组成" class="headerlink" title="TensorFlow.js的特色与基本组成"></a>TensorFlow.js的特色与基本组成</h2><p>由于TensorFlow.js是由JavaScript编写而成，因此只要与浏览器相关的应用，都可以与TensorFlow.js直接整合，这意味着我们可以将浏览器功能与机器学习搭配起来，组合成更多元的Web Application。<br>TensorFlow.js也支持WebGL，因此即使在浏览器上，我们也能使用GPU来加速运算结果，不用担心在浏览器上的性能限制。<br>TensorFlow.js分成低阶与高阶两组API。<br>低阶的API是由 deeplearn.js 衍生，负责处理一些低阶如线性代数的数据运算等等，来协助我们处理机器学习中的数学运算部分。<br>而高阶的API则是用来包装一些常用的机器学习演算法，同时允许我们载入训练好的模型，像是由Keras学习的模型等等。</p><h2 id="机器学习基本概念"><a href="#机器学习基本概念" class="headerlink" title="机器学习基本概念"></a>机器学习基本概念</h2><p>先来简单讲讲一般机器学习是怎么做的，在机器学习中，通常我们会针对一个题目，给予一组学习数据清单，这些数据包含了问题与答案，接着通过机器学习的各种算法，来训练出一个针对这个题目的模型。<br>这个模型通常就代表了一个公式，只要将题目带进去公式，就能够算出答案，而这个公式怎么来的呢？就是通过机器学习算法，这些算法通常会先随机产生一个公式(也就是模型)，接着将学习数据带进去计算出预测值，并与正确答案比较，并通过不断的调整模型内容，不断想办法降低预测值与正确答案的差距，直到预测值与足够接近正确答案为止。<br>简单来说，就是经验法则啦！刚开始学一项知识的时候，得到的结果会与预期落差很大，借由不断学到正确知识后，就会与预期越来越接近！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是机器学习&quot;&gt;&lt;a href=&quot;#什么是机器学习&quot; class=&quot;headerlink&quot; title=&quot;什么是机器学习&quot;&gt;&lt;/a&gt;什么是机器学习&lt;/h2&gt;&lt;p&gt;你可能每天用到它许多次却不知道它。 每次你用谷歌或者必应搜索，它们很好用 是因为它们的机器学习软件已</summary>
+      
+    
+    
+    
+    
+    <category term="机器学习" scheme="https://yczzy.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown语法</title>
