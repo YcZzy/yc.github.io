@@ -6,7 +6,7 @@
   <link href="https://yczzy.github.io/atom.xml" rel="self"/>
   
   <link href="https://yczzy.github.io/"/>
-  <updated>2021-04-20T12:31:13.391Z</updated>
+  <updated>2021-04-21T12:41:39.643Z</updated>
   <id>https://yczzy.github.io/</id>
   
   <author>
@@ -17,18 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>算法题2</title>
+    <link href="https://yczzy.github.io/2021/04/21/%E7%AE%97%E6%B3%95%E9%A2%982/"/>
+    <id>https://yczzy.github.io/2021/04/21/%E7%AE%97%E6%B3%95%E9%A2%982/</id>
+    <published>2021-04-21T12:04:53.000Z</published>
+    <updated>2021-04-21T12:41:39.643Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目-（简单）"><a href="#题目-（简单）" class="headerlink" title="题目 （简单）"></a>题目 （简单）</h2><p>替换空格</p><p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为 We Are Happy.则经过替换之后的字符串为 We%20<br>Are%20Happy</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>1.将字符串转换为数组，统计其中的空格数量</p><p>2.根据空格数量和原有长度计算出替换后的字符长度数组</p><p>3.创建2个指针，一个指末尾，一个指字符串有效位末尾，实现原地修改</p><p>数组遍历从后往前遍历，避免从前往后，造成字符串被修改</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var replaceSpace &#x3D; function (s) &#123;</span><br><span class="line">    s &#x3D; s.split(&quot;&quot;);</span><br><span class="line">    let oldLen &#x3D; s.length;</span><br><span class="line">    let spaceCount &#x3D; 0;</span><br><span class="line">    for(let i&#x3D;0;i&lt; oldLen; i++)&#123;</span><br><span class="line">        if(s[i]&#x3D;&#x3D;&#x3D;&#39; &#39;)&#123;</span><br><span class="line">            spaceCount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    s.length +&#x3D; spaceCount * 2;</span><br><span class="line">    for (let i &#x3D; oldLen-1,j&#x3D;s.length-1;i&gt;&#x3D;0;i--,j--)&#123;</span><br><span class="line">        if(s[i] !&#x3D;&#x3D; &#39; &#39;) s[j] &#x3D; s[i];</span><br><span class="line">        else &#123;</span><br><span class="line">            s[j-2]&#x3D;&#39;%&#39;;</span><br><span class="line">            s[j-1]&#x3D;&#39;2&#39;;</span><br><span class="line">            s[j]&#x3D;&#39;0&#39;;</span><br><span class="line">            j-&#x3D;2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return s.join(&#39;&#39;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目-（简单）&quot;&gt;&lt;a href=&quot;#题目-（简单）&quot; class=&quot;headerlink&quot; title=&quot;题目 （简单）&quot;&gt;&lt;/a&gt;题目 （简单）&lt;/h2&gt;&lt;p&gt;替换空格&lt;/p&gt;
+&lt;p&gt;请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为 We</summary>
+      
+    
+    
+    
+    <category term="每日一题" scheme="https://yczzy.github.io/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+    
+    <category term="算法" scheme="https://yczzy.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法题1</title>
     <link href="https://yczzy.github.io/2021/04/20/%E7%AE%97%E6%B3%95%E9%A2%981/"/>
     <id>https://yczzy.github.io/2021/04/20/%E7%AE%97%E6%B3%95%E9%A2%981/</id>
     <published>2021-04-20T12:04:07.000Z</published>
-    <updated>2021-04-20T12:31:13.391Z</updated>
+    <updated>2021-04-21T12:06:17.859Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="题目（中等）"><a href="#题目（中等）" class="headerlink" title="题目（中等）"></a>题目（中等）</h2><p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的<br>一个二维数组和一个整数，判断数组中是否含有该整数。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>1.使用两层循环遍历，时间复杂度o(n^2)</p><p>2.利用递增的特定，可以从左上角开始遍历，当前数值比所求的值小，向右，当前数值比所求的值大，向上，时间复杂度o(n)</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> var findNumber &#x3D; function(matrix,target)&#123;</span><br><span class="line">    if(!matrix.length) return false;</span><br><span class="line">    let x &#x3D; matrix.length - 1,y&#x3D;0;</span><br><span class="line">    while(x&gt;&#x3D;0;y &lt; matrix[0].length)&#123;</span><br><span class="line">        if(matrix[x][y] &#x3D;&#x3D;&#x3D; target)&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;else if (matrix[x][y] &gt; target)&#123;</span><br><span class="line">            x--</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            y++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="题目（中等）"><a href="#题目（中等）" class="headerlink" title="题目（中等）"></a>题目（中等）</h2><p>二维数组中的查找</p><p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的<br>一个二维数组和一个整数，判断数组中是否含有该整数。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>1.使用两层循环遍历，时间复杂度o(n^2)</p><p>2.利用递增的特定，可以从左上角开始遍历，当前数值比所求的值小，向右，当前数值比所求的值大，向上，时间复杂度o(n)</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> var findNumber &#x3D; function(matrix,target)&#123;</span><br><span class="line">    if(!matrix.length) return false;</span><br><span class="line">    let x &#x3D; matrix.length - 1,y&#x3D;0;</span><br><span class="line">    while(x&gt;&#x3D;0;y &lt; matrix[0].length)&#123;</span><br><span class="line">        if(matrix[x][y] &#x3D;&#x3D;&#x3D; target)&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;else if (matrix[x][y] &gt; target)&#123;</span><br><span class="line">            x--</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            y++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;题目（中等）&quot;&gt;&lt;a href=&quot;#题目（中等）&quot; class=&quot;headerlink&quot; title=&quot;题目（中等）&quot;&gt;&lt;/a&gt;题目（中等）&lt;/h2&gt;&lt;p&gt;在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输</summary>
+    <summary type="html">&lt;h2 id=&quot;题目（中等）&quot;&gt;&lt;a href=&quot;#题目（中等）&quot; class=&quot;headerlink&quot; title=&quot;题目（中等）&quot;&gt;&lt;/a&gt;题目（中等）&lt;/h2&gt;&lt;p&gt;二维数组中的查找&lt;/p&gt;
+&lt;p&gt;在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递</summary>
       
     
     
