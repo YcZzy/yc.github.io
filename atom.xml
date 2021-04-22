@@ -6,7 +6,7 @@
   <link href="https://yczzy.github.io/atom.xml" rel="self"/>
   
   <link href="https://yczzy.github.io/"/>
-  <updated>2021-04-22T12:54:07.624Z</updated>
+  <updated>2021-04-22T12:56:01.102Z</updated>
   <id>https://yczzy.github.io/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://yczzy.github.io/2021/04/22/a/"/>
-    <id>https://yczzy.github.io/2021/04/22/a/</id>
-    <published>2021-04-22T12:38:13.614Z</published>
-    <updated>2021-04-22T12:54:07.624Z</updated>
-    
-    <content type="html"><![CDATA[var numWays = function(n) {    let dp = [];    dp[0] = 1;    dp[1] = 1;    for (let i = 2; i <= n; i++) {      let c = dp[i - 1] + dp[i - 2];      dp[i] = c ;    }    return dp[n]}console.log(numWays(3))]]></content>
-    
-    
-      
-      
-    <summary type="html">var numWays = function(n) {
-    let dp = [];
-    dp[0] = 1;
-    dp[1] = 1;
-    for (let i = 2; i &lt;= n; i++) {
-      let c = dp[i - 1] + dp[i</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>算法题3</title>
