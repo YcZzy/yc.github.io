@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="2021/04/22/a/"/>
-      <url>2021/04/22/a/</url>
-      
-        <content type="html"><![CDATA[var numWays = function(n) {    let dp = [];    dp[0] = 1;    dp[1] = 1;    for (let i = 2; i <= n; i++) {      let c = dp[i - 1] + dp[i - 2];      dp[i] = c ;    }    return dp[n]}console.log(numWays(3))]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>算法题3</title>
       <link href="2021/04/22/%E7%AE%97%E6%B3%95%E9%A2%983/"/>
       <url>2021/04/22/%E7%AE%97%E6%B3%95%E9%A2%983/</url>
