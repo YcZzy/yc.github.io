@@ -13,7 +13,7 @@ console.log(data?.children?.[0]?.title) // undefined
 data  = {children: [{title:'codercao'}]}
 console.log(data?.children?.[0]?.title) // codercao
 ```
-# 对于方法的调用你可以这样写
+### 对于方法的调用你可以这样写
 
 ```
 object.runsOnlyIfMethodExists?.()
@@ -31,7 +31,7 @@ let parent = {
   parent.getTitle?.()  //不会执行
   
 ```
-# 与无效合并一起使用
+### 与无效合并一起使用
 ```
 let title = data?.children?.[0]?.title ?? 'codercao';
 console.log(title); // codercao
