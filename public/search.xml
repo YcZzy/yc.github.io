@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>算法题5</title>
+      <link href="2021/04/25/%E7%AE%97%E6%B3%95%E9%A2%985/"/>
+      <url>2021/04/25/%E7%AE%97%E6%B3%95%E9%A2%985/</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目-（简单）"><a href="#题目-（简单）" class="headerlink" title="题目 （简单）"></a>题目 （简单）</h2><p>调整数组顺序使奇数位于偶数前面</p><p>输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于位于数组的后半<br>部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>一个不为 0 的整数的二进制表示，一定会有一位为 1。我们找到最右边的一位 1，当我们将整数减去 1 时，最右边的一位 1 变为 0，它后<br>面的所有位都取反，因此将减一后的值与原值相与，我们就会能够消除最右边的一位 1。因此判断一个二进制中 1 的个数，我们可以判<br>断这个数可以经历多少次这样的过程</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>方法一</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @format</span><br><span class="line"> * @param &#123;number[]&#125; nums</span><br><span class="line"> * @return &#123;number[]&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 不用看双指针  数组问题基本要想到双指针</span><br><span class="line">&#x2F;&#x2F; 双指针解法可以优化空间和时间 原地</span><br><span class="line">var exchange &#x3D; function (nums) &#123;</span><br><span class="line"> let front &#x3D; 0</span><br><span class="line"> let after &#x3D; 0</span><br><span class="line"> for (let i &#x3D; 0; i &lt; nums.length; i++) &#123;</span><br><span class="line">  &#x2F;&#x2F; 证明是偶数</span><br><span class="line">  if (nums[after] % 2 &#x3D;&#x3D;&#x3D; 0 &amp;&amp; front &lt; nums.length) &#123;</span><br><span class="line">   while (nums[front] % 2 &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">    front++</span><br><span class="line">   &#125;</span><br><span class="line">   if (front &lt; nums.length) &#123;</span><br><span class="line">    &#x2F;&#x2F; 交换</span><br><span class="line">    let temp &#x3D; nums[front]</span><br><span class="line">    nums[front] &#x3D; nums[after]</span><br><span class="line">    nums[after] &#x3D; temp</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  after++</span><br><span class="line">  front++</span><br><span class="line"> &#125;</span><br><span class="line"> return nums</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>方法二</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var exchange &#x3D; function(nums) &#123;</span><br><span class="line">    return nums.sort((a,b)&#x3D;&gt;b%2-a%2)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 每日一题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript中几个优雅的运算符使用技巧</title>
       <link href="2021/04/25/JavaScript%E4%B8%AD%E5%87%A0%E4%B8%AA%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
       <url>2021/04/25/JavaScript%E4%B8%AD%E5%87%A0%E4%B8%AA%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
