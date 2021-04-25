@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>JavaScript中几个优雅的运算符使用技巧</title>
+      <link href="2021/04/25/JavaScript%E4%B8%AD%E5%87%A0%E4%B8%AA%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+      <url>2021/04/25/JavaScript%E4%B8%AD%E5%87%A0%E4%B8%AA%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<h2 id="可选链接运算符【？-】"><a href="#可选链接运算符【？-】" class="headerlink" title="可选链接运算符【？.】"></a>可选链接运算符【？.】</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let data;</span><br><span class="line">console.log(data?.children?.[0]?.title) &#x2F;&#x2F; undefined</span><br><span class="line"></span><br><span class="line">data  &#x3D; &#123;children: [&#123;title:&#39;codercao&#39;&#125;]&#125;</span><br><span class="line">console.log(data?.children?.[0]?.title) &#x2F;&#x2F; codercao</span><br></pre></td></tr></table></figure><h1 id="对于方法的调用你可以这样写"><a href="#对于方法的调用你可以这样写" class="headerlink" title="对于方法的调用你可以这样写"></a>对于方法的调用你可以这样写</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.runsOnlyIfMethodExists?.()</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let parent &#x3D; &#123;</span><br><span class="line">    name: &quot;parent&quot;,</span><br><span class="line">    friends: [&quot;p1&quot;, &quot;p2&quot;, &quot;p3&quot;],</span><br><span class="line">    getName: function() &#123;</span><br><span class="line">      console.log(this.name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">  parent.getName?.()   &#x2F;&#x2F; parent</span><br><span class="line">  parent.getTitle?.()  &#x2F;&#x2F;不会执行</span><br><span class="line">  </span><br></pre></td></tr></table></figure><h1 id="与无效合并一起使用"><a href="#与无效合并一起使用" class="headerlink" title="与无效合并一起使用"></a>与无效合并一起使用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let title &#x3D; data?.children?.[0]?.title ?? &#39;codercao&#39;;</span><br><span class="line">console.log(title); &#x2F;&#x2F; codercao</span><br></pre></td></tr></table></figure><h2 id="逻辑空分配（-）"><a href="#逻辑空分配（-）" class="headerlink" title="逻辑空分配（?? =）"></a>逻辑空分配（?? =）</h2><p>逻辑空值运算符仅在空值（空值或未定义）时才将值分配给expr1，表达方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expr1 ??&#x3D; expr2</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="逻辑或分配（-）"><a href="#逻辑或分配（-）" class="headerlink" title="逻辑或分配（|| =）"></a>逻辑或分配（|| =）</h2><p>此逻辑赋值运算符仅在左侧表达式为 falsy值时才赋值。Falsy与null有所不同，因为falsy可以是任何一种值：false，0，“”，null，undefined和NaN等</p><p>在我们想要保留现有值（如果不存在）的情况下，这很有用，否则我们想为其分配默认值。例如，如果搜索请求中没有数据，我们希望将元素的内部HTML设置为默认值。否则，我们要显示现有列表。这样，我们避免了不必要的更新和任何副作用，例如解析，重新渲染，失去焦点等。我们可以简单地使用此运算符来使用JavaScript更新HTML：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&#39;search&#39;).innerHTML ||&#x3D; &#39;&lt;i&gt;No posts found matching this search.&lt;&#x2F;i&gt;&#39;</span><br></pre></td></tr></table></figure><h2 id="逻辑与分配（-amp-amp-）"><a href="#逻辑与分配（-amp-amp-）" class="headerlink" title="逻辑与分配（&amp;&amp; =）"></a>逻辑与分配（&amp;&amp; =）</h2><p>此逻辑赋值运算符仅在左侧为真时才赋值</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &amp;&amp;&#x3D; y</span><br></pre></td></tr></table></figure><p>等同于</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &amp;&amp; (x &#x3D; y)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>算法题4</title>
       <link href="2021/04/23/%E7%AE%97%E6%B3%95%E9%A2%984/"/>
       <url>2021/04/23/%E7%AE%97%E6%B3%95%E9%A2%984/</url>
