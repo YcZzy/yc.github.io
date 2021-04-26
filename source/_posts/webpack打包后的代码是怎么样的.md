@@ -362,4 +362,4 @@ var promise = new Promise(function(resolve, reject) {
 
 大致的流程如下图所示
 
-![alt text]([image.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/234b9478b2764bddbeee6c539d85c4ff~tplv-k3u1fbpfcp-zoom-1.image))
+[image.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/234b9478b2764bddbeee6c539d85c4ff~tplv-k3u1fbpfcp-zoom-1.image)
