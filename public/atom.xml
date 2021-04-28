@@ -6,7 +6,7 @@
   <link href="https://yczzy.github.io/atom.xml" rel="self"/>
   
   <link href="https://yczzy.github.io/"/>
-  <updated>2021-04-25T12:40:59.933Z</updated>
+  <updated>2021-04-27T12:43:56.289Z</updated>
   <id>https://yczzy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法题6</title>
+    <link href="https://yczzy.github.io/2021/04/27/%E7%AE%97%E6%B3%95%E9%A2%986/"/>
+    <id>https://yczzy.github.io/2021/04/27/%E7%AE%97%E6%B3%95%E9%A2%986/</id>
+    <published>2021-04-27T12:15:45.000Z</published>
+    <updated>2021-04-27T12:43:56.289Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目-（困难）"><a href="#题目-（困难）" class="headerlink" title="题目 （困难）"></a>题目 （困难）</h2><p>整数中 1 出现的次数</p><p>求出 1<del>13 的整数中 1 出现的次数，并算出 100</del>1# 300 的整数中 1 出现的次数？为此他特别数了一下 1~13 中包含 1 的数字有 1、10、11、<br>12、13 因此共出现 6 次，但是对于后面问题他就没辙了。ACMer 希望你们帮帮他，并把问题更加普遍化，可以很快的求出任意非负整<br>数区间中 1 出现的次数。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这种题就要找规律，与之前做的那道找某个位置是什么数字的类似<br>现在有一个函数f(n)，代表n位上有多少个1<br>        f(0) = 0<br> 0<del>9    f(1) = 1<br> 0</del>99   f(2) = 10 + 10<em>f(1) = 20  (10+为  10<del>19中十位有10个1)<br> 0</del>999  f(3) = 100 + 10</em>f(2) = 300  (100+为  100<del>199中百位有100个1)<br> 10</del>9999 f(4) = 1000 + 10*f(3) = 4000 (…)<br>…<br>如 5467 中有多少个1</p><ol><li>0~5000中有 5 * f(3) + 1000 = 2500个</li><li>0~400中有 4 * f(2) + 100 = 180个</li><li>0~60中有 6 * f(1) + 10 = 16个</li><li>0~7中有 7 * f(0) + 1 = 1个<br>所以5467中有2697个1</li></ol><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>方法一</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;number&#125; n</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var countDigitOne &#x3D; function(n) &#123;</span><br><span class="line">    let f &#x3D; [0,1,20,300,4000,50000,600000,7000000,80000000,900000000,10000000000];</span><br><span class="line">    let res &#x3D; 0;</span><br><span class="line">    let str &#x3D; n + &#39;&#39;;</span><br><span class="line">    const len &#x3D; str.length;</span><br><span class="line">    let m &#x3D; Math.pow(10,len - 1);</span><br><span class="line">    let p &#x3D; len - 1; &#x2F;&#x2F;解析中的n</span><br><span class="line">    for(let i &#x3D; 0; i &lt; len; i++) &#123;</span><br><span class="line">        res +&#x3D; str[i] * f[p];</span><br><span class="line">        if(str[i] &#x3D;&#x3D;&#x3D; &#39;1&#39; &amp;&amp; i !&#x3D;&#x3D; len - 1) &#123;&#x2F;&#x2F;中间为1时后面的每一个数都要加一个1，再加上第一个1，比如12中10，11,12三个数的十位有3个1，需要加上，也就是2+1个1要加上</span><br><span class="line">         res +&#x3D; Number(str.slice(i + 1)) + 1;</span><br><span class="line">        &#125; else if(str[i] &#x3D;&#x3D;&#x3D; &#39;1&#39; &amp;&amp; i &#x3D;&#x3D;&#x3D; len - 1) &#123;&#x2F;&#x2F;解决末尾为1但未加上的bug</span><br><span class="line">         res +&#x3D; 1;</span><br><span class="line">        &#125;</span><br><span class="line">        if(str[i] &gt; 1) res +&#x3D; m;</span><br><span class="line">        m &#x2F;&#x3D; 10, p -&#x3D;1;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目-（困难）&quot;&gt;&lt;a href=&quot;#题目-（困难）&quot; class=&quot;headerlink&quot; title=&quot;题目 （困难）&quot;&gt;&lt;/a&gt;题目 （困难）&lt;/h2&gt;&lt;p&gt;整数中 1 出现的次数&lt;/p&gt;
+&lt;p&gt;求出 1&lt;del&gt;13 的整数中 1 出现的次数，并算出 10</summary>
+      
+    
+    
+    
+    <category term="每日一题" scheme="https://yczzy.github.io/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+    
+    <category term="算法" scheme="https://yczzy.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>算法题5</title>
